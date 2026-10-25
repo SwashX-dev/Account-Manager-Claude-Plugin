@@ -1,0 +1,7 @@
+{
+  "name": "claude-account-manager",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Independent Claude web accounts using Firefox containers. No token extraction.",
+  "scripts": { "test": "node --test", "lint": "node scripts/validate.js", "build": "node scripts/build.js", "lint:mozilla": "npx --yes web-ext@8.9.0 lint --source-dir extension" }
+}
