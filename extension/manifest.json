@@ -1,0 +1,12 @@
+{
+  "manifest_version": 2,
+  "name": "Claude Account Manager (Unofficial)",
+  "version": "0.1.0",
+  "description": "Switch between independent Claude web account containers without handling credentials.",
+  "browser_specific_settings": { "gecko": { "id": "claude-account-manager@swashx-dev.local", "strict_min_version": "115.0" } },
+  "permissions": ["contextualIdentities", "cookies", "storage", "https://claude.ai/*"],
+  "background": { "scripts": ["core.js", "background.js"] },
+  "browser_action": { "default_title": "Claude Account Manager", "default_popup": "manager.html" },
+  "content_scripts": [{ "matches": ["https://claude.ai/*"], "js": ["content.js"], "run_at": "document_idle" }],
+  "content_security_policy": "script-src 'self'; object-src 'none'"
+}

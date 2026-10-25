@@ -1,0 +1,12 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Claude Account Manager</title><link rel="stylesheet" href="manager.css"></head>
+<body><main>
+<header><div class="mark" aria-hidden="true">✳</div><div><p class="eyebrow">YOUR SPACES, SEPARATELY</p><h1>Account Manager</h1></div></header>
+<p class="intro">A little room for every account.<br>Switch spaces. Keep your sessions.</p>
+<div class="notice">Claude web · Independent Firefox containers</div>
+<section aria-labelledby="accounts-heading"><div class="section-head"><h2 id="accounts-heading">Your accounts</h2><button id="refresh" class="quiet" type="button">Refresh</button></div><div id="accounts"></div></section>
+<form id="add-form"><label for="name">Add an account</label><div class="input-row"><input id="name" name="name" maxlength="60" required placeholder="Personal, work, or something else" autocomplete="off"><button type="submit" class="primary">Add & sign in</button></div><p class="hint">Sign in once on Claude’s official website. This extension never asks for passwords or tokens.</p></form>
+<p id="status" role="status" aria-live="polite"></p>
+<details><summary>Sessions & privacy</summary><p>Labels are yours to choose, not verified account identities. “Current space” means the container in the active tab, not confirmed login status.</p><p>To log out, open an account and use Claude’s own profile → Log out. If a session expires, sign in there again. Firefox stores the sessions; this manager stores only names and container IDs.</p><p>Removing a space closes all its tabs and deletes its container data. It does not delete your Claude account or revoke sessions on other devices.</p></details>
+<footer>Unofficial, local-first companion. Not affiliated with Anthropic.<br>Desktop app sessions are separate and unchanged.</footer>
+</main><dialog id="confirm"><form method="dialog"><h2 id="dialog-title">Remove account space?</h2><p id="dialog-text"></p><div class="dialog-actions"><button value="cancel">Keep space</button><button value="remove" class="danger">Remove space</button></div></form></dialog><script src="manager.js"></script></body></html>
